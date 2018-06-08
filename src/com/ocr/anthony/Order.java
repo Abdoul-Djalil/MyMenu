@@ -1,5 +1,7 @@
 package com.ocr.anthony;
 
+import java.util.Scanner;
+
 public class Order {
     /**
      * Display all available menus in the restaurant.
@@ -29,9 +31,16 @@ public class Order {
 
         }
 
-
-
-
+    }
+    /**
+     *  run asking process for a menu
+     */
+    public void runMenu(){
+        Order order = new Order();
+        order.displayAvailableMenu();
+        Scanner sc = new Scanner(System.in);
+        int nb = sc.nextInt();
+        order.displaySelectedMenu(nb);
 
     }
 }
